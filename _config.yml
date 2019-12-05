@@ -25,7 +25,8 @@ github_username:  lsqtongxin
 # Build settings
 markdown: kramdown
 #theme: minima
-theme: jekyll-theme-hacker
+#theme: jekyll-theme-hacker
+remote_theme: thelehhman/plainwhite-jekyll
 plugins:
   - jekyll-feed
 
