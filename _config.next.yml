@@ -1,2 +1,9 @@
 scheme: Gemini
 darkmode: true
+
+menu:
+  home: / || fa fa-home
+  archives: /archives/ || fa fa-archive
+  about: /about/ || fa fa-user
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-categories
