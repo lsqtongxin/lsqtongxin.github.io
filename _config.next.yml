@@ -7,3 +7,8 @@ menu:
   about: /about/ || fa fa-user
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-categories
+  
+symbols_count_time:
+  separated_meta: true
+  item_text_post: true
+  item_text_total: false
