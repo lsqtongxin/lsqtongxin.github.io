@@ -131,6 +131,12 @@ feed:
   icon: icon.png
   autodiscovery: true
   template:
+ 
+emoji:
+  enable: true
+  className: github-emoji
+  styles:
+  customEmojis:
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
