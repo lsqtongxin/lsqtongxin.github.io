@@ -6,7 +6,7 @@
   <link href="http://blog.liushiqiang.net/atom.xml" rel="self"/>
   
   <link href="http://blog.liushiqiang.net/"/>
-  <updated>2021-04-28T01:19:40.000Z</updated>
+  <updated>2021-06-19T01:19:40.000Z</updated>
   <id>http://blog.liushiqiang.net/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>工作中Git的那些操作</title>
+    <link href="http://blog.liushiqiang.net/2021/06/19/%E5%B7%A5%E4%BD%9C%E4%B8%ADGit%E7%9A%84%E9%82%A3%E4%BA%9B%E6%93%8D%E4%BD%9C/"/>
+    <id>http://blog.liushiqiang.net/2021/06/19/%E5%B7%A5%E4%BD%9C%E4%B8%ADGit%E7%9A%84%E9%82%A3%E4%BA%9B%E6%93%8D%E4%BD%9C/</id>
+    <published>2021-06-19T01:19:40.000Z</published>
+    <updated>2021-06-19T01:19:40.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;其实接触Git也很长时间了，自打上学那会就用Git作为版本控制工具，感触颇深。写这篇文章也是记录一下自己的理解留作日后词典进行查询，另外也是想把这些内容分享给大家。本篇将以问题为导向来阐述相关的知识，，面对的对象为具有一定经验的开发者。&lt;/p&gt;
+&lt;p&gt;假设当前项目有两个分支</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>myFirstArticle</title>
