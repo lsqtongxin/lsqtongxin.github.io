@@ -20,12 +20,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;blog.liushiqiang.net&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="其实接触Git也很长时间了，自打上学那会就用Git作为版本控制工具，感触颇深。写这篇文章也是记录一下自己的理解留作日后词典进行查询，另外也是想把这些内容分享给大家。本篇将以问题为导向来阐述相关的知识，，面对的对象为具有一定经验的开发者。 假设当前项目有两个分支，为master和dev，所有开发工作都在dev上进行，而master分支为用于发布生产代码的分支，当前系统为windows7或window">
+<meta name="description" content="其实接触Git也很长时间了，自打上学那会就用Git作为版本控制工具，感触颇深。写这篇文章也是记录一下自己的理解留作日后词典进行查询，另外也是想把这些内容分享给大家。本篇将以问题为导向来阐述相关的知识，面对的对象为具有一定经验的开发者。 假设当前项目有两个分支，为master和dev，所有开发工作都在dev上进行，而master分支为用于发布生产代码的分支，当前系统为windows7或windows">
 <meta property="og:type" content="article">
 <meta property="og:title" content="工作中Git的那些操作">
 <meta property="og:url" content="http://blog.liushiqiang.net/2021/06/19/%E5%B7%A5%E4%BD%9C%E4%B8%ADGit%E7%9A%84%E9%82%A3%E4%BA%9B%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="KermitLiu&#39;s博客">
-<meta property="og:description" content="其实接触Git也很长时间了，自打上学那会就用Git作为版本控制工具，感触颇深。写这篇文章也是记录一下自己的理解留作日后词典进行查询，另外也是想把这些内容分享给大家。本篇将以问题为导向来阐述相关的知识，，面对的对象为具有一定经验的开发者。 假设当前项目有两个分支，为master和dev，所有开发工作都在dev上进行，而master分支为用于发布生产代码的分支，当前系统为windows7或window">
+<meta property="og:description" content="其实接触Git也很长时间了，自打上学那会就用Git作为版本控制工具，感触颇深。写这篇文章也是记录一下自己的理解留作日后词典进行查询，另外也是想把这些内容分享给大家。本篇将以问题为导向来阐述相关的知识，面对的对象为具有一定经验的开发者。 假设当前项目有两个分支，为master和dev，所有开发工作都在dev上进行，而master分支为用于发布生产代码的分支，当前系统为windows7或windows">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-06-19T01:19:40.000Z">
 <meta property="article:modified_time" content="2021-06-19T01:19:40.000Z">
@@ -278,7 +278,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>其实接触Git也很长时间了，自打上学那会就用Git作为版本控制工具，感触颇深。写这篇文章也是记录一下自己的理解留作日后词典进行查询，另外也是想把这些内容分享给大家。本篇将以问题为导向来阐述相关的知识，，面对的对象为具有一定经验的开发者。</p>
+        <p>其实接触Git也很长时间了，自打上学那会就用Git作为版本控制工具，感触颇深。写这篇文章也是记录一下自己的理解留作日后词典进行查询，另外也是想把这些内容分享给大家。本篇将以问题为导向来阐述相关的知识，面对的对象为具有一定经验的开发者。</p>
 <p>假设当前项目有两个分支，为master和dev，所有开发工作都在dev上进行，而master分支为用于发布生产代码的分支，当前系统为windows7或windows10</p>
 <p><strong>我整理了我在日常工作中的十个问题，重点是第4个问题和第8个问题，如下所示：</strong></p>
 <h3 id="1-撤销本地工作目录中的更改"><a href="#1-撤销本地工作目录中的更改" class="headerlink" title="1.撤销本地工作目录中的更改"></a>1.撤销本地工作目录中的更改</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></table></figure>
