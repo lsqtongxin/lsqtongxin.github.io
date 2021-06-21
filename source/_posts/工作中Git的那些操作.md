@@ -21,9 +21,9 @@ git checkout -- <file>
 ### 2.撤销本地缓存的更改
 
 ```
-git reset <file>			//从缓存区移除特定文件，但不改变工作目录，与git add <file>是反义词
-git reset					//它会取消 *所有* 文件的缓存，而不会覆盖任何修改，与`git add .`是反义词
-git reset --hard			//它会取消 *所有* 文件的缓存，并且恢复工作目录
+git reset <file>			    //从缓存区移除特定文件，但不改变工作目录，与`git add <file>`是反义词
+git reset                       //从缓存区移除所有已加入的文件的缓存，而不会覆盖任何修改，与`git add .`是反义词
+git reset --hard                //从缓存区移除所有已加入的文件的缓存，并且恢复工作目录
 ```
 
 ### 3.当在本地提交commit后如何修改这个commit message？
