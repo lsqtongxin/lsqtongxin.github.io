@@ -35,7 +35,7 @@
 <h3 id="1-撤销本地工作目录中的更改"><a href="#1-撤销本地工作目录中的更改" class="headerlink" title="1.撤销本地工作目录中的更改"></a>1.撤销本地工作目录中的更改</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></table></figure>
 
 <p>这样将撤销对本地工作目录的更改。</p>
-<h3 id="2-撤销本地缓存的更改"><a href="#2-撤销本地缓存的更改" class="headerlink" title="2.撤销本地缓存的更改"></a>2.撤销本地缓存的更改</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git reset &lt;file&gt;			//从缓存区移除特定文件，但不改变工作目录，与git add &lt;file&gt;是反义词</span><br><span class="line">git reset					//它会取消 *所有* 文件的缓存，而不会覆盖任何修改，与`git add .`是反义词</span><br><span class="line">git reset --hard			//它会取消 *所有* 文件的缓存，并且恢复工作目录</span><br></pre></td></tr></table></figure>
+<h3 id="2-撤销本地缓存的更改"><a href="#2-撤销本地缓存的更改" class="headerlink" title="2.撤销本地缓存的更改"></a>2.撤销本地缓存的更改</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git reset &lt;file&gt;			    //从缓存区移除特定文件，但不改变工作目录，与`git add &lt;file&gt;`是反义词</span><br><span class="line">git reset                       //从缓存区移除所有已加入的文件的缓存，而不会覆盖任何修改，与`git add .`是反义词</span><br><span class="line">git reset --hard                //从缓存区移除所有已加入的文件的缓存，并且恢复工作目录</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-当在本地提交commit后如何修改这个commit-message？"><a href="#3-当在本地提交commit后如何修改这个commit-message？" class="headerlink" title="3.当在本地提交commit后如何修改这个commit message？"></a>3.当在本地提交commit后如何修改这个commit message？</h3><p><strong>git commit命令有一个amend参数，用于修改之前的提交信息</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
