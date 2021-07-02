@@ -6,7 +6,7 @@
   <link href="http://blog.liushiqiang.net/atom.xml" rel="self"/>
   
   <link href="http://blog.liushiqiang.net/"/>
-  <updated>2021-06-19T01:19:40.000Z</updated>
+  <updated>2021-06-29T01:19:40.000Z</updated>
   <id>http://blog.liushiqiang.net/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git中有意思的那些命令</title>
+    <link href="http://blog.liushiqiang.net/2021/06/29/Git%E4%B8%AD%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E9%82%A3%E4%BA%9B%E5%91%BD%E4%BB%A4/"/>
+    <id>http://blog.liushiqiang.net/2021/06/29/Git%E4%B8%AD%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E9%82%A3%E4%BA%9B%E5%91%BD%E4%BB%A4/</id>
+    <published>2021-06-29T01:19:40.000Z</published>
+    <updated>2021-06-29T01:19:40.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;哎呀，这是我第一篇技术文章啦，写这篇文章是为了记录一下那些被忽略的命令，另外也是想把这些内容分享给大家。&lt;/p&gt;
+&lt;p&gt;当前系统为windows7或windows10&lt;/p&gt;
+&lt;h3 id=&quot;1-git-merge-base&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>工作中Git的那些操作</title>
