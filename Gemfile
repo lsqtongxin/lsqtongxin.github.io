@@ -1,6 +1,8 @@
-source "https://rubygems.org"
+source "https://mirrors.tuna.tsinghua.edu.cn/rubygems/"
 
-gem "jekyll", "~> 3.1"
+gem "jekyll"
 gem "jekyll-sitemap"
-gem "pygments.rb"
+gem "rouge"
 gem "kramdown-parser-gfm"
+
+gem "webrick", "~> 1.7"
