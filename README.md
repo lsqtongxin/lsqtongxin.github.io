@@ -1,1 +1,1 @@
-# Jekyll-Bootstrap
+# hexojs
