@@ -9,7 +9,7 @@ menu:
   tags: /tags
   #categories: /categories
   search: /search
-  about: https://0xff000000.com
+  about: 
   rss: /atom.xml
 
 # Miscelaneous
@@ -30,6 +30,6 @@ scripts:
 show_excerpt: true
 show_date: true
 #footer
-index_page: https://blog.0xff000000.com
-main_site: https://0xff000000.com
-github: https://github.com/KevinOfNeu
+index_page: https://lsqtongxin.github.io
+main_site: https://lsqtongxin.github.io
+github: https://github.com/lsqtongxin
