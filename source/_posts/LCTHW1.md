@@ -1,6 +1,6 @@
 ---
 title: 笨方法学习C-笔记1
-date: {{ date }}
+date: 2025-01-05 14:25:00
 tags: LCTHW
 ---
 
@@ -53,7 +53,7 @@ C比其它语言都要难，而这是由于C并不对你隐藏细节，它们在
 ## [练习0](https://wizardforcel.gitbooks.io/lcthw/content/ex0.html)
 
 我计划使用
-+ Linux Ubuntu 24.04.1 LTS (vmware虚拟机x86) 或 Linux 统信UOS(真实机器aarch64)
++ Linux Ubuntu 24.04.1 LTS (vmware虚拟机x86) 或 Linux UnionTech OS Desktop 20 Pro(真实机器aarch64)
 + vim
 + **警告不要使用IDE**
 
