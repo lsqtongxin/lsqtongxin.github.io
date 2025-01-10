@@ -10,7 +10,7 @@ tags: LCTHW
 
 > [LCTHW Github](https://github.com/wizardforcel/lcthw-zh)
 
-# 笔记1所包括的范围
+## 笔记1所包括的范围
 
 - [前言](https://wizardforcel.gitbooks.io/lcthw/content/preface.html)
 - [导言](https://wizardforcel.gitbooks.io/lcthw/content/introduction.html)
@@ -150,6 +150,12 @@ RETURN VALUE
 
 
 Makefile文件的缩进是一个TAB，下面代码中第四行rm前面是一个 *TAB* ，而不是多个等量的空格。
+其中每条规则就明确两件事：构建目标的前置条件是什么，以及如何构建
+```bash
+<target> : <prerequisites> 
+[tab]  <commands>
+```
+
 ```c
 CFLAGS=-Wall -g
 

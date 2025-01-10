@@ -12,6 +12,8 @@ tags: verilator
 + [systemc install](https://github.com/accellera-official/systemc/blob/main/INSTALL.md)
 + [gtkwave](https://gtkwave.github.io/gtkwave/index.html)
 + [gtkwave formats](https://gtkwave.github.io/gtkwave/intro/formats.html)
++ [cmake](https://cmake.org/)
++ [cmake download](https://cmake.org/download/)
 
 # verilator安装
 我的电脑是Linux Ubuntu 24.04.1 LTS (vmware虚拟机x86) 和 Linux UnionTech OS Desktop 20 Pro(真实机器aarch64)
@@ -128,5 +130,44 @@ GTKWave是一个基于Unix/Win32/MacOSX的全特性的示波器，类似于学�
 这个组件的安装就很随意了，直接使用apt进行安装
 ```bash
 sudo apt install gtkwave
+```
+# gtkwave使用
+
+我们直接按照它提供的[案例](https://gtkwave.github.io/gtkwave/quickstart/sample.html)进行说明。
+将[example代码](https://github.com/gtkwave/gtkwave)下载到本地
+这个例子是des加密即des.v, 我的当前系统并没有安装iverilog软件，咱们这里仅是将现有的des.fst转换为vcd
+```bash
+$ fst2vcd des.fst > des.vcd
+```
+我们会发现这个以.vcd为结尾的文件比.fst文件大很多，推荐使用.fst文件，后面会说如何将.vcd文件自动转化为.fst文件。
+下一步，我们通过verilator生成一个stems文件
+```c
+verilator -Wno-fatal --no-timing des.v -xml-only
+xml2stems obj_dir/Vdes.xml des.stems
+```
+当源文件布局或体系变更需要重新生成stems文件。
+```bash
+//  -o, --optimize             optimize VCD to FST 对vcd文件进行自动优化为fst
+//  -t, --stems=FILE           specify stems file for source code annotation 为源代码注解指定stems文件
+$ gtkwave -o -t des.stems des.vcd des.gtkw
+GTKWave Analyzer v3.3.118 (w)1999-2023 BSI
+FSTLOAD | Processing 1432 facs.
+FSTLOAD | Built 1287 signals and 145 aliases.
+FSTLOAD | Building facility hierarchy tree.
+FSTLOAD | Sorting facility hierarchy tree.
+```
+
+# cmake安装
+从[下载链接](https://cmake.org/download/)进行下载最新版本的cmake源码，当前版本是3.31.3
+```bash
+tar -xzvf cmake-3.31.3.tar.gz
+cd cmake-3.31.3
+./configure
+make -j8
+sudo make install
+```
+并输出cmake版本
+```bash
+cmake --version
 ```
 
