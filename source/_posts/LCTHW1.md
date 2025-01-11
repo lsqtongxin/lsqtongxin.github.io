@@ -2,6 +2,8 @@
 title: 笨方法学习C-笔记1
 date: 2025-01-05 14:25:00
 tags: LCTHW
+cover: /images/LCTHW1/LCTHW1-1.png
+thumbnail: /images/LCTHW1/LCTHW1-1.png
 ---
 
 > LCTHW： [Learn C The Hard Way](https://learncodethehardway.org/c/)
@@ -78,20 +80,20 @@ int main(int argc,char* argv[]){
         return 0;
 }
 ```
-![img](./1-1.png)
+![img](/images/LCTHW1/LCTHW1-1.png)
 
 ### 执行命令：
 ```c
 make ex1
 ```
-![img](./1-2.png)
+![img](/images/LCTHW1/LCTHW1-2.png)
 通过编译的结果来看，存在一个警告，提示我们需要将 #include<stdio.h>添加到代码中
 
 ### 未加#include<stdio.h>,运行ex1:
-![img](./1-3.png)
+![img](/images/LCTHW1/LCTHW1-3.png)
 
 ### 添加加#include<stdio.h>,运行ex1:
-![img](./1-4.png)
+![img](/images/LCTHW1/LCTHW1-4.png)
 
 ### 附加题
 

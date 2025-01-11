@@ -4,12 +4,12 @@
 
 # Site
 title: KermitLiu
-subtitle: ''
-description: ''
-keywords:
+subtitle: "KermitLiu's个人博客"
+description: '一个记录自己生活、工作的博客网站'
+keywords: kermitliu blog
 author: KermitLiu
 language: zh-CN
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -40,7 +40,10 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
