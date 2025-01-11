@@ -231,11 +231,11 @@ widgets:
         # Author name
         author: KermitLiu
         # Author title
-        author_title: Your title
+        author_title: 软硬件开发工程师/航模爱好者 
         # Author's current location
-        location: Beijing
+        location: 北京
         # URL or path to the avatar image
-        avatar: 
+        avatar: https://avatars.githubusercontent.com/u/6594728?v=4
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
@@ -247,18 +247,6 @@ widgets:
             Github:
                 icon: fab fa-github
                 url: https://github.com/lsqtongxin
-            Facebook:
-                icon: fab fa-facebook
-                url: https://facebook.com
-            Twitter:
-                icon: fab fa-twitter
-                url: https://twitter.com
-            Dribbble:
-                icon: fab fa-dribbble
-                url: https://dribbble.com
-            RSS:
-                icon: fas fa-rss
-                url: /
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -278,7 +266,7 @@ widgets:
         # Names and URLs of the sites
         links:
             Hexo: https://hexo.io
-            Bulma: https://bulma.io
+            ruanyifeng: https://ruanyifeng.com/blog/
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -302,7 +290,7 @@ widgets:
         # How to order tags. For example 'name' to order by name in ascending order, and '-length' to order by number of posts in each tags in descending order
         order_by: name
         # Amount of tags to show. Will show all if not set.
-        amount: 
+        amount: 20
         # Whether to show tags count, i.e. number of posts in the tag.
         show_count: true
     # Google FeedBurner email subscription widget configurations

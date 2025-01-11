@@ -2,6 +2,7 @@
 title: 学习verilator-笔记1
 date: 2025-01-08 14:39:00
 tags: verilator
+toc: true
 ---
 
 # 笔记1所包括的范围
