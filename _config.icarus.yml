@@ -319,9 +319,9 @@ widgets:
         # Hint text under the email input
         description: 
         # Subscription form action URL
-        action_url: ''
+        action_url: 'https://api.follow.it/subscription-form/TGZVaVQ2NlA4WGRBUGZ3dy91L3Z3NXNLaUxMTzVUOWwwTjl4NlpidkdqQVNmMmg3L0MrZGo1aDd4ZWxLREVVR2hlZXgrck13V0NHZlJzbmtHSnU1SEw1USt4UWowNGRUaEdSem5mRDZnWUVxeUxxMWIwWXQ0VlVIcmlTTWxYN3h8YmhDaFBkUHg2Q0NpalUyY1JZUExRV1BZUkpHTlBQaXFBQ25Vdm15Q1ZQWT0=/8'
         # Feed claiming verification code
-        verification_code: ''
+        verification_code: 'krhyCLWPk5HpRVg6bWbR'
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
