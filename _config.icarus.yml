@@ -167,7 +167,7 @@ search:
 comment:
     type: disqus
     # Disqus shortname
-    shortname: ''
+    shortname: 'kermit-1'
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
@@ -266,7 +266,7 @@ widgets:
         # Names and URLs of the sites
         links:
             Hexo: https://hexo.io
-            ruanyifeng: https://ruanyifeng.com/blog/
+						HackerNews: https://news.ycombinator.com/
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
