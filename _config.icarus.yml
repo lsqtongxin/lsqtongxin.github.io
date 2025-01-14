@@ -165,9 +165,10 @@ search:
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
-    type: disqus
+    type: disqusjs
     # Disqus shortname
     shortname: 'kermit-1'
+		api_key: evBwtpJsEzWPHiwdaQL3e9pY7mKKXNQr7exMvjvwWyVOAJB0gTeHyTTR26JFWmdK
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:

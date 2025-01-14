@@ -43,13 +43,13 @@ git tag          # See what versions exist
 # 这里的版本与 文档保持一致，v5.008
 git checkout v{version}  # Switch to specified release version
 
-![v5.008](https://telegraph-image-cnr.pages.dev/api/rfile/verilator1-1.png)
-
 autoconf         # Create ./configure script
 ./configure      # Configure and create Makefile
 make -j `nproc`  # Build Verilator itself (if error, try just 'make')
 sudo make install
 ```
+![v5.008](https://telegraph-image-cnr.pages.dev/api/rfile/verilator1-1.png)
+
 # systemc安装
 [官方安装步骤](https://github.com/accellera-official/systemc/blob/main/INSTALL.md)
 
@@ -79,8 +79,8 @@ sudo make install
      ```bash
      make check
      ```
-		 ![Testsuite summary for SystemC 3.0.0](https://telegraph-image-cnr.pages.dev/api/rfile/verilator1-2.png)
-		 ![Testsuite summary for TLM 2.0.6](https://telegraph-image-cnr.pages.dev/api/rfile/verilator1-3.png)
+![Testsuite summary for SystemC 3.0.0](https://telegraph-image-cnr.pages.dev/api/rfile/verilator1-2.png)
+![Testsuite summary for TLM 2.0.6](https://telegraph-image-cnr.pages.dev/api/rfile/verilator1-3.png)
   6. 安装
      ```bash
      make install
