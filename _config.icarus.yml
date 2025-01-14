@@ -266,7 +266,7 @@ widgets:
         # Names and URLs of the sites
         links:
             Hexo: https://hexo.io
-						HackerNews: https://news.ycombinator.com/
+            HackerNews: https://news.ycombinator.com/
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar

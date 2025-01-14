@@ -80,20 +80,19 @@ int main(int argc,char* argv[]){
         return 0;
 }
 ```
-![img](https://telegraph-image-cnr.pages.dev/api/rfile/LCTHW1-1.png)
+![ex1.c](https://telegraph-image-cnr.pages.dev/api/rfile/LCTHW1-1.png)
 
 ### 执行命令：
 ```c
 make ex1
 ```
-![img](https://telegraph-image-cnr.pages.dev/api/rfile/LCTHW1-2.png)
+![make ex1](https://telegraph-image-cnr.pages.dev/api/rfile/LCTHW1-2.png)
 通过编译的结果来看，存在一个警告，提示我们需要将 #include<stdio.h>添加到代码中
 
 ### 未加#include<stdio.h>,运行ex1:
-![img](https://telegraph-image-cnr.pages.dev/api/rfile/LCTHW1-3.png)
+![./ex1](https://telegraph-image-cnr.pages.dev/api/rfile/LCTHW1-3.png)
 
 ### 添加加#include<stdio.h>,运行ex1:
-![img](https://telegraph-image-cnr.pages.dev/api/rfile/LCTHW1-4.png)
 
 ### 附加题
 

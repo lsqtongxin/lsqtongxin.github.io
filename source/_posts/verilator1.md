@@ -43,6 +43,8 @@ git tag          # See what versions exist
 # 这里的版本与 文档保持一致，v5.008
 git checkout v{version}  # Switch to specified release version
 
+![v5.008](https://telegraph-image-cnr.pages.dev/api/rfile/verilator1-1.png)
+
 autoconf         # Create ./configure script
 ./configure      # Configure and create Makefile
 make -j `nproc`  # Build Verilator itself (if error, try just 'make')
@@ -77,6 +79,8 @@ sudo make install
      ```bash
      make check
      ```
+		 ![Testsuite summary for SystemC 3.0.0](https://telegraph-image-cnr.pages.dev/api/rfile/verilator1-2.png)
+		 ![Testsuite summary for TLM 2.0.6](https://telegraph-image-cnr.pages.dev/api/rfile/verilator1-3.png)
   6. 安装
      ```bash
      make install
@@ -141,6 +145,8 @@ sudo apt install gtkwave
 $ fst2vcd des.fst > des.vcd
 ```
 我们会发现这个以.vcd为结尾的文件比.fst文件大很多，推荐使用.fst文件，后面会说如何将.vcd文件自动转化为.fst文件。
+![.vcd vs .fst](https://telegraph-image-cnr.pages.dev/api/rfile/verilator1-4.png)
+
 下一步，我们通过verilator生成一个stems文件
 ```c
 verilator -Wno-fatal --no-timing des.v -xml-only
@@ -171,4 +177,4 @@ sudo make install
 ```bash
 cmake --version
 ```
-
+![cmake version](https://telegraph-image-cnr.pages.dev/api/rfile/verilator1-5.png)
