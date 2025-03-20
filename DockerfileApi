@@ -1,0 +1,81 @@
+# 单阶段完整构建（所有操作顺序执行）
+FROM python:3.12-slim-bookworm
+
+# ----------------------------
+# 阶段1：基础配置与联网操作（强制前置）
+# ----------------------------
+WORKDIR /app/api
+
+# 配置中国镜像源（可选）
+# RUN sed -i 's@deb.debian.org@mirrors.aliyun.com@g' /etc/apt/sources.list.d/debian.sources
+# RUN pip config set global.index-url https://mirrors.aliyun.com/pypi/simple
+
+# 安装系统构建依赖（必须前置的联网操作）
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        gcc g++ libc-dev libffi-dev libgmp-dev libmpfr-dev libmpc-dev \
+        curl nodejs \
+        expat libldap-2.5-0 perl libsqlite3-0 zlib1g \
+        fonts-noto-cjk libmagic1 && \
+    apt-get autoremove -y && \
+    rm -rf /var/lib/apt/lists/*
+
+# 安装Poetry（联网操作）
+ENV POETRY_VERSION=2.0.1 \
+    POETRY_NO_INTERACTION=1 \
+    POETRY_VIRTUALENVS_IN_PROJECT=true \
+    POETRY_VIRTUALENVS_CREATE=true \
+    POETRY_CACHE_DIR=/tmp/poetry_cache \
+    POETRY_REQUESTS_TIMEOUT=15
+
+RUN pip install --no-cache-dir poetry==${POETRY_VERSION}
+
+# ----------------------------
+# 阶段2：Python依赖安装（联网操作）
+# ----------------------------
+# 先复制依赖文件以利用缓存
+COPY pyproject.toml poetry.lock ./
+
+# 安装Python依赖（包含编译操作）
+RUN poetry install --sync --no-cache --no-root
+
+# ----------------------------
+# 阶段3：运行时环境配置（可包含联网操作）
+# ----------------------------
+# 预下载NLTK数据（联网操作）
+RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
+
+# 预生成Tiktoken缓存（联网操作）
+RUN python -c "import tiktoken; tiktoken.encoding_for_model('gpt2')"
+
+# 配置时区
+ENV TZ=UTC
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# ----------------------------
+# 阶段4：应用部署（非联网操作）
+# ----------------------------
+# 复制源代码（放在最后以优化缓存）
+COPY . /app/api/
+
+# 配置虚拟环境路径
+ENV VIRTUAL_ENV=/app/api/.venv \
+    PATH="/app/api/.venv/bin:$PATH" \
+    FLASK_APP=app.py \
+    EDITION=SELF_HOSTED \
+    DEPLOY_ENV=PRODUCTION \
+    CONSOLE_API_URL=http://127.0.0.1:5001 \
+    CONSOLE_WEB_URL=http://127.0.0.1:3000 \
+    SERVICE_API_URL=http://127.0.0.1:5001 \
+    APP_WEB_URL=http://127.0.0.1:3000 \
+    TIKTOKEN_CACHE_DIR=/app/api/.tiktoken_cache
+
+# 配置入口脚本
+COPY docker/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# 元数据
+EXPOSE 5001
+ARG COMMIT_SHA
+ENV COMMIT_SHA=${COMMIT_SHA}
+ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
